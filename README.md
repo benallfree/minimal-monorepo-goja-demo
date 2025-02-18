@@ -36,6 +36,14 @@ Failed to execute index.pb.js:
  - GoError: Invalid module at github.com/dop251/goja_nodejs/require.(*RequireModule).require-fm (native)
 ```
 
+As further evidence that this does not follow NodeJS's module resolution rules, you can try:
+
+```
+ node pb_hooks/index.pb.js
+```
+
+and observe that it succeedfully finds `node_modules/marked` in the monorepo root.
+
 This error comes from [getCurrentModulePath](https://github.com/benallfree/goja_nodejs/blob/28407dfeec35522c06b2e296fdeefc42e6b6b78f/require/resolve.go#L229) in goja-nodejs where `frames[1].SrcName()` is empty.
 
 From [path.Dir docs](https://pkg.go.dev/path#Dir):
