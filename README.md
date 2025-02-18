@@ -10,7 +10,7 @@ bun i
 
 ## Test case
 
-We chose the [makred](https://www.npmjs.com/package/marked) NPM package because it is known to be compatible with Goja.
+We chose the [marked](https://www.npmjs.com/package/marked) NPM package because it is known to be compatible with Goja.
 
 ## Working demo
 
