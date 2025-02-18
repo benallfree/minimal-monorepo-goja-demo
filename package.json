@@ -1,0 +1,7 @@
+{
+  "name": "minimal-monorepo-goja-demo",
+  "private": true,
+  "workspaces": [
+    "projects/*"
+  ]
+}
